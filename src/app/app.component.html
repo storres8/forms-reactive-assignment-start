@@ -62,8 +62,19 @@
           *ngIf="
             !projectForm.get('email').valid && projectForm.get('email').touched
           "
-          >Please enter a valid email</span
         >
+          <span
+            class="help-block"
+            *ngIf="projectForm.get('email').hasError('required')"
+            >This Field is Required</span
+          >
+
+          <span
+            class="help-block"
+            *ngIf="projectForm.get('email').hasError('email')"
+            >Please Enter A Valid Email</span
+          >
+        </span>
 
         <!-- Project Status Label and Input -->
         <div class="form-group">
