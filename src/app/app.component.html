@@ -38,6 +38,22 @@
             required
           />
         </div>
+
+        <!-- Project Status Label and Input -->
+        <div class="form-group">
+          <label for="status">Project Status</label>
+          <select
+            name="status"
+            id="status"
+            class="form-control"
+            formControlName="status"
+            required
+          >
+            <option value="stable">Stable</option>
+            <option value="critical">Critical</option>
+            <option value="finished">Finished</option>
+          </select>
+        </div>
         <button class="btn btn-primary" type="submit">Submit</button>
       </form>
     </div>
