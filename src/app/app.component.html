@@ -31,8 +31,21 @@
             !projectForm.get('projectName').valid &&
             projectForm.get('projectName').touched
           "
-          >Please enter a project name</span
         >
+          <span
+            class="help-block"
+            *ngIf="
+              projectForm.get('projectName').hasError('forbiddenProjectName')
+            "
+            >Please Enter a Valid Project Name</span
+          >
+
+          <span
+            class="help-block"
+            *ngIf="projectForm.get('projectName').hasError('required')"
+            >This Field is Required</span
+          >
+        </span>
 
         <!-- Email Label and Input -->
         <div class="form-group">
